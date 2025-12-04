@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Legacy Builders LLC - Dedicated to the Community</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Configuration for Colors and Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            /* Colors based on the logo */
+            --color-titan-orange: #E8813C; /* Burnt Orange Accent */
+            --color-titan-dark: #1A1A1A;   /* Near Black for Text/Background */
+            --color-titan-light: #F7F7F7;  /* Off-White Background */
+        }
+        
+        /* Apply the Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-titan-light);
+        }
+
+        /* Utility classes using custom colors */
+        .text-titan-orange { color: var(--color-titan-orange); }
+        .bg-titan-orange { background-color: var(--color-titan-orange); }
+        .border-titan-orange { border-color: var(--color-titan-orange); }
+        .text-titan-dark { color: var(--color-titan-dark); }
+        .bg-titan-dark { background-color: var(--color-titan-dark); }
+        
+        /* Utility for smooth transitions on hover */
+        .transition-colors { transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
+    </style>
+</head>
+
+<body class="text-titan-dark">
+
+    <!-- Navigation Bar (Header) -->
+    <header class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo and Company Name -->
+            <div class="flex items-center space-x-3">
+                <!-- Link back to home page -->
+                <a href="index.html" class="text-2xl font-extrabold text-titan-dark tracking-tight hover:text-titan-orange transition-colors">
+                    Titan Legacy Builders <span class="text-titan-orange">LLC</span>
+                </a>
+            </div>
+            
+            <!-- Desktop Menu (Restored Services and Contact links) -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#services" class="text-titan-dark hover:text-titan-orange transition-colors">Services</a>
+                <!-- The "Our Legacy" link remains removed from the header based on previous instructions -->
+                <a href="#footer" class="text-titan-dark hover:text-titan-orange transition-colors">Contact</a>
+            </nav>
+
+            <!-- Simple Mobile Menu Icon (Hamburger) -->
+            <button class="md:hidden text-titan-dark text-2xl hover:text-titan-orange transition-colors">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-titan-dark text-white py-20 md:py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-[1]">
+            <h2 class="text-4xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                Building Futures. <span class="text-titan-orange">Honoring Legacies.</span>
+            </h2>
+            <p class="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto font-light">
+                Titan Legacy Builders LLC: A construction business dedicated to the community, committed to excellence and lasting impact.
+            </p>
+            <!-- Button link points to the footer for contact info -->
+            <a href="#footer" class="bg-titan-orange hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-xl text-lg shadow-2xl shadow-titan-orange/50 transition-colors uppercase tracking-widest">
+                Get a Free Estimate
+            </a>
+        </div>
+        <!-- Subtle background pattern (geometric shapes) -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="titan-pattern" patternUnits="userSpaceOnUse" width="20" height="20">
+                        <path d="M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2" stroke="#E8813C" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#titan-pattern)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-4xl font-extrabold text-center mb-4 text-titan-dark">Our Core Services</h3>
+        <p class="text-xl text-center mb-12 text-gray-600">Comprehensive solutions from cleanup to complete renovation.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card Template -->
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-dumpster text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Haul Away Services</h4>
+                <p class="text-gray-600">Fast and reliable removal of construction debris, yard waste, and unwanted materials to keep your project moving.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-broom text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Clean Outs</h4>
+                <p class="text-gray-600">Professional clean out services for estates, garages, commercial spaces, and pre/post-construction sites.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-tools text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Renovations</h4>
+                <p class="text-gray-600">Transform your space with expert full-scale home and commercial renovation projects, tailored to your vision.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-faucet text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Plumbing</h4>
+                <p class="text-gray-600">Skilled plumbing installation, repair, and maintenance for new construction and renovation projects.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-bolt text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Electrical</h4>
+                <p class="text-gray-600">Safe and certified electrical wiring, lighting installation, and system upgrades.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-paint-roller text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Drywall Services</h4>
+                <p class="text-gray-600">Flawless drywall installation, repair, and finishing for smooth, professional walls and ceilings.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
+                <i class="fas fa-fire-alt text-4xl text-titan-orange mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Demo Services</h4>
+                <p class="text-gray-600">Safe, controlled demolition services for interior and exterior structures, getting your site ready for the next phase.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The About/Community Focus Section is now on about.html -->
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-titan-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 mb-6">
+                <p class="font-bold text-lg">Titan Legacy Builders LLC</p>
+                <!-- Social and email icons removed as requested -->
+            </div>
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="year"></span> Titan Legacy Builders LLC. All rights reserved. | Dedicated to Quality and Community.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript to update year in footer -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
