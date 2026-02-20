@@ -3,164 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titan Legacy Builders LLC - Dedicated to the Community</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Titan Legacy Builders LLC | PA Home Renovations & Mechanicals</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Custom Configuration for Colors and Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        
-        :root {
-            /* Colors based on the logo */
-            --color-titan-orange: #E8813C; /* Burnt Orange Accent */
-            --color-titan-dark: #1A1A1A;   /* Near Black for Text/Background */
-            --color-titan-light: #F7F7F7;  /* Off-White Background */
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), 
+            url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover; 
+            background-position: center; 
         }
-        
-        /* Apply the Inter font globally */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-titan-light);
-        }
-
-        /* Utility classes using custom colors */
-        .text-titan-orange { color: var(--color-titan-orange); }
-        .bg-titan-orange { background-color: var(--color-titan-orange); }
-        .border-titan-orange { border-color: var(--color-titan-orange); }
-        .text-titan-dark { color: var(--color-titan-dark); }
-        .bg-titan-dark { background-color: var(--color-titan-dark); }
-        
-        /* Utility for smooth transitions on hover */
-        .transition-colors { transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
+        .star-color { color: #fabb05; }
+        .google-btn { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
+        .google-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); background-color: #fabb05; color: #000; border-color: #fabb05; }
+        #success-message { display: none; }
+        .code-logo { filter: grayscale(100%); opacity: 0.7; transition: 0.3s; }
+        .code-logo:hover { filter: grayscale(0%); opacity: 1; }
+        .about-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
     </style>
 </head>
+<body class="bg-gray-50 text-gray-900">
 
-<body class="text-titan-dark">
-
-    <!-- Navigation Bar (Header) -->
-    <header class="bg-white shadow-lg sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo and Company Name -->
-            <div class="flex items-center space-x-3">
-                <!-- Link back to home page -->
-                <a href="index.html" class="text-2xl font-extrabold text-titan-dark tracking-tight hover:text-titan-orange transition-colors">
-                    Titan Legacy Builders <span class="text-titan-orange">LLC</span>
-                </a>
+    <nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50">
+        <div class="flex flex-col">
+            <div class="text-xl md:text-2xl font-bold tracking-tighter text-slate-800 uppercase">
+                TITAN <span class="text-orange-700">Legacy</span> Builders LLC
             </div>
-            
-            <!-- Desktop Menu (Restored Services and Contact links) -->
-            <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="#services" class="text-titan-dark hover:text-titan-orange transition-colors">Services</a>
-                <!-- The "Our Legacy" link remains removed from the header based on previous instructions -->
-                <a href="#footer" class="text-titan-dark hover:text-titan-orange transition-colors">Contact</a>
-            </nav>
+            <span class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Licensed & Fully Insured • Pennsylvania</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-orange-700 transition">Our Mission</a>
+            <a href="#services" class="hover:text-orange-700 transition">Services</a>
+            <a href="#compliance" class="hover:text-orange-700 transition">Compliance</a>
+            <a href="#contact" class="hover:text-orange-700 transition">Estimate</a>
+        </div>
+        <div class="hidden md:block text-slate-800 font-bold border-l-2 border-orange-700 pl-4 text-lg">
+            (223) 246-4781
+        </div>
+    </nav>
 
-            <!-- Simple Mobile Menu Icon (Hamburger) -->
-            <button class="md:hidden text-titan-dark text-2xl hover:text-titan-orange transition-colors">
-                <i class="fas fa-bars"></i>
-            </button>
+    <header class="hero-bg h-[85vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-8xl mb-6 drop-shadow-lg">Building Foundations for Generations</h1>
+            <p class="text-xl md:text-3xl mb-10 max-w-3xl mx-auto font-light drop-shadow-md text-gray-200">
+                Expert Home Renovations & Full-Scale Mechanical Services in Pennsylvania.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-orange-700 hover:bg-orange-800 text-white text-lg px-10 py-4 rounded-sm transition duration-300 font-bold uppercase tracking-wider">Start Your Project</a>
+                <a href="#about" class="bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 text-white text-lg px-10 py-4 rounded-sm transition duration-300 font-bold uppercase tracking-wider text-center">Our "Why"</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-titan-dark text-white py-20 md:py-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-[1]">
-            <h2 class="text-4xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-                Building Futures. <span class="text-titan-orange">Honoring Legacies.</span>
-            </h2>
-            <p class="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto font-light">
-                Titan Legacy Builders LLC: A construction business dedicated to the community, committed to excellence and lasting impact.
-            </p>
-            <!-- Button link points to the footer for contact info -->
-            <a href="#footer" class="bg-titan-orange hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-xl text-lg shadow-2xl shadow-titan-orange/50 transition-colors uppercase tracking-widest">
-                Get a Free Estimate
-            </a>
-        </div>
-        <!-- Subtle background pattern (geometric shapes) -->
-        <div class="absolute inset-0 opacity-10">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="titan-pattern" patternUnits="userSpaceOnUse" width="20" height="20">
-                        <path d="M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2" stroke="#E8813C" stroke-width="0.5"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#titan-pattern)"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="text-4xl font-extrabold text-center mb-4 text-titan-dark">Our Core Services</h3>
-        <p class="text-xl text-center mb-12 text-gray-600">Comprehensive solutions from cleanup to complete renovation.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service Card Template -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-dumpster text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Haul Away Services</h4>
-                <p class="text-gray-600">Fast and reliable removal of construction debris, yard waste, and unwanted materials to keep your project moving.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-broom text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Clean Outs</h4>
-                <p class="text-gray-600">Professional clean out services for estates, garages, commercial spaces, and pre/post-construction sites.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-tools text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Renovations</h4>
-                <p class="text-gray-600">Transform your space with expert full-scale home and commercial renovation projects, tailored to your vision.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-faucet text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Plumbing</h4>
-                <p class="text-gray-600">Skilled plumbing installation, repair, and maintenance for new construction and renovation projects.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-bolt text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Electrical</h4>
-                <p class="text-gray-600">Safe and certified electrical wiring, lighting installation, and system upgrades.</p>
+    <section id="about" class="py-24 about-gradient text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl mb-4">Our Legacy & Mission</h2>
+                <div class="h-1 w-20 bg-orange-700 mx-auto"></div>
             </div>
             
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-paint-roller text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Drywall Services</h4>
-                <p class="text-gray-600">Flawless drywall installation, repair, and finishing for smooth, professional walls and ceilings.</p>
-            </div>
+            <div class="prose prose-invert prose-lg max-w-none font-light leading-relaxed text-gray-300 space-y-8">
+                <p class="text-xl md:text-2xl italic text-white font-medium">
+                    At Titan Legacy Builders LLC, we believe a company’s true value isn't measured by its profit margins, but by the lives it touches and the communities it restores.
+                </p>
+                
+                <p>The world can often feel like a heavy place. Between systemic neglect and the "ugly head" of greed, far too many people are left in the dark. We see the neighborhoods that have been shunned. We see the families that state and local officials have overlooked. We see the "forgotten" communities where problems persist simply because fixing them doesn't offer a high enough "price point" for others to care.</p>
+                
+                <div class="border-l-4 border-orange-700 pl-8 my-12">
+                    <h3 class="text-3xl text-white mb-6 font-bold uppercase tracking-widest">We refuse to accept that.</h3>
+                    <p>Where others see a lack of ROI, we see a legacy worth building. Where incompetence and greed have stalled progress, Titan Legacy Builders shows up to provide:</p>
+                </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-titan-orange">
-                <i class="fas fa-fire-alt text-4xl text-titan-orange mb-4"></i>
-                <h4 class="text-2xl font-semibold mb-2 text-titan-dark">Demo Services</h4>
-                <p class="text-gray-600">Safe, controlled demolition services for interior and exterior structures, getting your site ready for the next phase.</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white/5 p-6 border border-white/10 rounded-sm">
+                        <h4 class="text-orange-700 font-bold mb-2 uppercase tracking-tighter">A Light in the Darkness</h4>
+                        <p class="text-sm">We go where others won't, focusing on the people and places the world has turned its back on.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 border border-white/10 rounded-sm">
+                        <h4 class="text-orange-700 font-bold mb-2 uppercase tracking-tighter">Integrity Over Income</h4>
+                        <p class="text-sm">We don’t walk away because a project isn’t "lucrative" enough. We show up because it’s the right thing to do.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 border border-white/10 rounded-sm">
+                        <h4 class="text-orange-700 font-bold mb-2 uppercase tracking-tighter">Service for the "Worthless"</h4>
+                        <p class="text-sm">No human being is a statistic. We are ready to give everything we have to support you.</p>
+                    </div>
+                </div>
+
+                <p class="pt-8 italic border-t border-white/10">There is a unique beauty in those who have "nothing" but possess the richest spirits. You are the heart of our mission. We aren’t just here to fix structures; we’re here to restore the dignity and safety that every human being deserves.</p>
+                
+                <p class="text-2xl text-center text-white font-bold tracking-widest uppercase py-4">
+                    If the world has forgotten you, know that Titan Legacy Builders is looking for you. <br>
+                    <span class="text-orange-700">We are ready to be the light.</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- The About/Community Focus Section is now on about.html -->
-
-    <!-- Footer -->
-    <footer id="footer" class="bg-titan-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 mb-6">
-                <p class="font-bold text-lg">Titan Legacy Builders LLC</p>
-                <!-- Social and email icons removed as requested -->
+    <section class="py-8 bg-slate-100 border-y border-gray-200 shadow-inner">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-20 items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-orange-700 text-2xl">✓</span>
+                <span class="font-bold uppercase tracking-widest text-sm text-slate-700">NEC & IBC Compliant</span>
             </div>
-            <p class="text-gray-400 text-sm">
-                &copy; <span id="year"></span> Titan Legacy Builders LLC. All rights reserved. | Dedicated to Quality and Community.
-            </p>
+            <div class="flex items-center space-x-2">
+                <span class="text-orange-700 text-2xl">✓</span>
+                <span class="font-bold uppercase tracking-widest text-sm text-slate-700">Fully Licensed</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-orange-700 text-2xl">✓</span>
+                <span class="font-bold uppercase tracking-widest text-sm text-slate-700">Comprehensive Insurance</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="compliance" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl mb-6 text-slate-900 uppercase tracking-tight font-bold">Built to Code, <br><span class="text-orange-700">Built to Last</span></h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 font-light">
+                        Every project we undertake is executed with strict adherence to the **National Electrical Code (NEC)** and the **International Building Code (IBC)**. We don't just build for aesthetics; we build for safety, longevity, and structural integrity.
+                    </p>
+                    <ul class="space-y-3 text-slate-700 font-semibold uppercase text-sm tracking-wider">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Verified Safe Electrical Systems</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Structural Integrity Standards</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Pennsylvania Regulation Compliant</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 flex justify-center gap-12 items-center">
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NFPA_logo.svg/1200px-NFPA_logo.svg.png" alt="NEC/NFPA" class="h-24 w-auto code-logo mb-4">
+                        <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">NEC Compliant</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/International_Code_Council_logo.svg/1200px-International_Code_Council_logo.svg.png" alt="IBC/ICC" class="h-24 w-auto code-logo mb-4">
+                        <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">IBC Standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl mb-4 text-slate-900">Our Specialties</h2>
+            <div class="h-1 w-20 bg-orange-700 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700">
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Home Renovations</h3>
+                <p class="text-gray-600 leading-relaxed font-light">Complete interior and exterior transformations. We breathe new life into Pennsylvania homes with modern design and expert finishes.</p>
+            </div>
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-slate-800">
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Electrical & HVAC</h3>
+                <p class="text-gray-600 leading-relaxed font-light">From panel upgrades and lighting to high-efficiency climate control systems, we ensure your home's vital systems are safe and modern.</p>
+            </div>
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700">
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Plumbing Solutions</h3>
+                <p class="text-gray-600 leading-relaxed font-light">Professional plumbing services for kitchen and bath remodels, new additions, and full system reruns with "Titan" durability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-slate-800 text-white border-y border-slate-700">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl mb-6">Customer Experience</h2>
+            
+            <div class="bg-slate-900/50 p-12 rounded-lg border border-slate-700 inline-block w-full max-w-2xl">
+                <div class="flex justify-center text-5xl star-color mb-4 drop-shadow-md">★★★★★</div>
+                <div class="text-3xl font-bold mb-2">5.0 Rating</div>
+                <p class="uppercase tracking-[0.3em] text-sm font-bold text-orange-700 mb-10">Verified Reviews</p>
+
+                <a href="https://www.google.com/search?q=Titan+Legacy+Builders+LLC+Waynesboro+PA" target="_blank" class="google-btn inline-flex items-center justify-center gap-4 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-lg">
+              
+                    <span>See the legacy for yourself</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-slate-900 text-white py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl mb-4 font-bold uppercase tracking-tighter text-white">Ready to Build Your Legacy?</h2>
+            <p class="mb-12 text-gray-400 font-light text-xl italic">Proudly serving Waynesboro and the surrounding Pennsylvania communities.</p>
+            
+            <form id="estimate-form" action="https://formspree.io/f/mreaajwp" method="POST" class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Full Name</label>
+                    <input type="text" name="name" required placeholder="Your Name" class="p-4 rounded-sm bg-slate-800 border border-slate-700 focus:outline-none focus:border-orange-700 text-white">
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Email Address</label>
+                    <input type="email" name="email" required placeholder="email@address.com" class="p-4 rounded-sm bg-slate-800 border border-slate-700 focus:outline-none focus:border-orange-700 text-white">
+                </div>
+                <div class="flex flex-col md:col-span-2">
+                    <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Project Details</label>
+                    <textarea name="message" required placeholder="Tell us about your project needs..." class="p-4 rounded-sm bg-slate-800 border border-slate-700 h-40 focus:outline-none focus:border-orange-700 text-white"></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="md:col-span-2 bg-orange-700 py-5 rounded-sm font-bold hover:bg-orange-800 transition uppercase tracking-[0.2em] text-lg">Request Free Estimate</button>
+            </form>
+
+            <div id="success-message" class="bg-white/5 backdrop-blur-md p-12 border-2 border-orange-700 rounded-sm mt-8">
+                <div class="text-orange-700 text-6xl mb-4">✓</div>
+                <h3 class="text-3xl font-bold mb-2 uppercase">Message Received</h3>
+                <p class="text-gray-300 text-lg font-light">Thank you for reaching out. We will contact you shortly.</p>
+            </div>
+
+            <div class="mt-10">
+                <p class="text-gray-500 uppercase tracking-widest text-sm">Direct Phone</p>
+                <a href="tel:2232464781" class="text-2xl font-bold text-white hover:text-orange-700 transition">(223) 246-4781</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-gray-200 text-center">
+        <div class="text-lg font-bold text-slate-800 mb-2 uppercase">
+            TITAN <span class="text-orange-700">Legacy</span> Builders LLC
+        </div>
+        <p class="text-slate-500 text-[10px] mb-4 uppercase tracking-widest italic tracking-[0.4em]">Renovations • Electrical • HVAC • Plumbing</p>
+        <div class="text-gray-500 text-xs tracking-widest uppercase">
+            &copy; 2026 | WAYNESBORO, PENNSYLVANIA | PH: (223) 246-4781
         </div>
     </footer>
 
-    <!-- Simple JavaScript to update year in footer -->
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        const form = document.getElementById('estimate-form');
+        const successMsg = document.getElementById('success-message');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerText = "SENDING...";
+
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                alert("Oops! There was a problem. Please call us directly at (223) 246-4781.");
+                submitBtn.disabled = false;
+                submitBtn.innerText = "REQUEST FREE ESTIMATE";
+            }
+        };
     </script>
 
 </body>
