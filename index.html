@@ -22,6 +22,20 @@
         .code-logo { filter: grayscale(100%); opacity: 0.7; transition: 0.3s; }
         .code-logo:hover { filter: grayscale(0%); opacity: 1; }
         .about-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+
+        /* Carousel Styles */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-400px * 4)); }
+        }
+        .slider { background: white; height: 140px; margin: auto; overflow: hidden; position: relative; width: 100%; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; }
+        .slider::before, .slider::after { background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); content: ""; height: 140px; position: absolute; width: 200px; z-index: 2; }
+        .slider::after { right: 0; top: 0; transform: rotateZ(180deg); }
+        .slider::before { left: 0; top: 0; }
+        .slide-track { animation: scroll 30s linear infinite; display: flex; width: calc(400px * 8); }
+        .slide { height: 140px; width: 400px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .partner-name { font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 4px; font-size: 1rem; transition: all 0.4s ease; }
+        .slide:hover .partner-name { color: #c2410c; transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -94,7 +108,7 @@
 
                 <p class="pt-8 italic border-t border-white/10">There is a unique beauty in those who have "nothing" but possess the richest spirits. You are the heart of our mission. We aren’t just here to fix structures; we’re here to restore the dignity and safety that every human being deserves.</p>
                 
-                <p class="text-2xl text-center text-white font-bold tracking-widest uppercase py-4">
+                <p class="text-2xl text-center text-white font-bold tracking-widest uppercase py-4 mt-8">
                     If the world has forgotten you, know that Titan Legacy Builders is looking for you. <br>
                     <span class="text-orange-700">We are ready to be the light.</span>
                 </p>
@@ -135,11 +149,11 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center gap-12 items-center">
                     <div class="text-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NFPA_logo.svg/1200px-NFPA_logo.svg.png" alt="NEC/NFPA" class="h-24 w-auto code-logo mb-4">
+           
                         <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">NEC Compliant</p>
                     </div>
                     <div class="text-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/International_Code_Council_logo.svg/1200px-International_Code_Council_logo.svg.png" alt="IBC/ICC" class="h-24 w-auto code-logo mb-4">
+         
                         <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">IBC Standards</p>
                     </div>
                 </div>
@@ -147,38 +161,55 @@
         </div>
     </section>
 
+    <section id="partners" class="py-16 bg-white overflow-hidden">
+        <div class="text-center mb-8">
+            <h2 class="text-sm md:text-lg uppercase tracking-[0.6em] text-slate-500 font-extrabold">Strategic Industry Partners</h2>
+        </div>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide"><span class="partner-name">Varner Roofing</span></div>
+                <div class="slide"><span class="partner-name">Lowe's</span></div>
+                <div class="slide"><span class="partner-name">Shady Grove Cabinets</span></div>
+                <div class="slide"><span class="partner-name">Burkholder Flooring</span></div>
+                <div class="slide"><span class="partner-name">Varner Roofing</span></div>
+                <div class="slide"><span class="partner-name">Lowe's</span></div>
+                <div class="slide"><span class="partner-name">Shady Grove Cabinets</span></div>
+                <div class="slide"><span class="partner-name">Burkholder Flooring</span></div>
+            </div>
+        </div>
+    </section>
+
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl mb-4 text-slate-900">Our Specialties</h2>
+            <h2 class="text-4xl md:text-5xl mb-4 text-slate-900 uppercase font-bold">Our Specialties</h2>
             <div class="h-1 w-20 bg-orange-700 mx-auto"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-12">
             <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Home Renovations</h3>
-                <p class="text-gray-600 leading-relaxed font-light">Complete interior and exterior transformations. We breathe new life into Pennsylvania homes with modern design and expert finishes.</p>
+                <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Home Renovations</h3>
+                <p class="text-gray-600 leading-relaxed font-light text-sm">Complete interior and exterior transformations. We breathe new life into Pennsylvania homes with modern design and expert finishes.</p>
             </div>
             <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-slate-800">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Electrical & HVAC</h3>
-                <p class="text-gray-600 leading-relaxed font-light">From panel upgrades and lighting to high-efficiency climate control systems, we ensure your home's vital systems are safe and modern.</p>
+                <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Electrical & HVAC</h3>
+                <p class="text-gray-600 leading-relaxed font-light text-sm">From panel upgrades and lighting to high-efficiency climate control systems, we ensure your home's vital systems are safe and modern.</p>
             </div>
             <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Plumbing Solutions</h3>
-                <p class="text-gray-600 leading-relaxed font-light">Professional plumbing services for kitchen and bath remodels, new additions, and full system reruns with "Titan" durability.</p>
+                <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Plumbing Solutions</h3>
+                <p class="text-gray-600 leading-relaxed font-light text-sm">Professional plumbing services for kitchen and bath remodels, new additions, and full system reruns with "Titan" durability.</p>
             </div>
         </div>
     </section>
 
     <section id="testimonials" class="py-24 bg-slate-800 text-white border-y border-slate-700">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl mb-6">Customer Experience</h2>
-            
+            <h2 class="text-4xl md:text-5xl mb-6 font-bold uppercase italic">Customer Experience</h2>
             <div class="bg-slate-900/50 p-12 rounded-lg border border-slate-700 inline-block w-full max-w-2xl">
                 <div class="flex justify-center text-5xl star-color mb-4 drop-shadow-md">★★★★★</div>
-                <div class="text-3xl font-bold mb-2">5.0 Rating</div>
+                <div class="text-3xl font-bold mb-2 uppercase italic">5.0 Rating</div>
                 <p class="uppercase tracking-[0.3em] text-sm font-bold text-orange-700 mb-10">Verified Reviews</p>
 
                 <a href="https://www.google.com/search?q=Titan+Legacy+Builders+LLC+Waynesboro+PA" target="_blank" class="google-btn inline-flex items-center justify-center gap-4 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-lg">
-              
+                 
                     <span>See the legacy for yourself</span>
                 </a>
             </div>
@@ -187,8 +218,8 @@
 
     <section id="contact" class="bg-slate-900 text-white py-24 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl mb-4 font-bold uppercase tracking-tighter text-white">Ready to Build Your Legacy?</h2>
-            <p class="mb-12 text-gray-400 font-light text-xl italic">Proudly serving Waynesboro and the surrounding Pennsylvania communities.</p>
+            <h2 class="text-4xl md:text-5xl mb-4 font-bold uppercase tracking-tighter">Ready to Build Your Legacy?</h2>
+            <p class="mb-12 text-gray-400 font-light text-xl italic">Proudly serving Waynesboro and surrounding Pennsylvania communities.</p>
             
             <form id="estimate-form" action="https://formspree.io/f/mreaajwp" method="POST" class="grid md:grid-cols-2 gap-6 text-left">
                 <div class="flex flex-col">
@@ -201,7 +232,7 @@
                 </div>
                 <div class="flex flex-col md:col-span-2">
                     <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Project Details</label>
-                    <textarea name="message" required placeholder="Tell us about your project needs..." class="p-4 rounded-sm bg-slate-800 border border-slate-700 h-40 focus:outline-none focus:border-orange-700 text-white"></textarea>
+                    <textarea name="message" required placeholder="Tell us how we can help..." class="p-4 rounded-sm bg-slate-800 border border-slate-700 h-40 focus:outline-none focus:border-orange-700 text-white"></textarea>
                 </div>
                 <button type="submit" id="submit-btn" class="md:col-span-2 bg-orange-700 py-5 rounded-sm font-bold hover:bg-orange-800 transition uppercase tracking-[0.2em] text-lg">Request Free Estimate</button>
             </form>
@@ -211,13 +242,8 @@
                 <h3 class="text-3xl font-bold mb-2 uppercase">Message Received</h3>
                 <p class="text-gray-300 text-lg font-light">Thank you for reaching out. We will contact you shortly.</p>
             </div>
-
-            <div class="mt-10">
-                <p class="text-gray-500 uppercase tracking-widest text-sm">Direct Phone</p>
-                <a href="tel:2232464781" class="text-2xl font-bold text-white hover:text-orange-700 transition">(223) 246-4781</a>
-            </div>
         </div>
-    </section>
+    </nav>
 
     <footer class="py-12 bg-white border-t border-gray-200 text-center">
         <div class="text-lg font-bold text-slate-800 mb-2 uppercase">
@@ -238,20 +264,18 @@
             e.preventDefault();
             submitBtn.disabled = true;
             submitBtn.innerText = "SENDING...";
-
             const formData = new FormData(form);
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
             });
-
             if (response.ok) {
                 form.style.display = 'none';
                 successMsg.style.display = 'block';
                 successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
-                alert("Oops! There was a problem. Please call us directly at (223) 246-4781.");
+                alert("Oops! There was a problem. Please call us directly.");
                 submitBtn.disabled = false;
                 submitBtn.innerText = "REQUEST FREE ESTIMATE";
             }
