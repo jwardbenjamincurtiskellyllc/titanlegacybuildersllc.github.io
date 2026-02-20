@@ -15,6 +15,13 @@
             background-size: cover; 
             background-position: center; 
         }
+        .blueprint-bg {
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+            url('https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
         .star-color { color: #fabb05; }
         .google-btn { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
         .google-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); background-color: #fabb05; color: #000; border-color: #fabb05; }
@@ -47,12 +54,11 @@
             </div>
             <span class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Licensed & Fully Insured • Pennsylvania</span>
         </div>
-        
         <div class="hidden lg:flex space-x-8 font-medium">
-            <a href="#about" class="hover:text-orange-700 transition">Our Mission</a>
-            <a href="#services" class="hover:text-orange-700 transition">Services</a>
-            <a href="#compliance" class="hover:text-orange-700 transition">Compliance</a>
-            <a href="#contact" class="hover:text-orange-700 transition">Estimate</a>
+            <a href="#about" class="hover:text-orange-700 transition uppercase tracking-widest text-sm">Our Mission</a>
+            <a href="#services" class="hover:text-orange-700 transition uppercase tracking-widest text-sm">Services</a>
+            <a href="#compliance" class="hover:text-orange-700 transition uppercase tracking-widest text-sm">Compliance</a>
+            <a href="#contact" class="hover:text-orange-700 transition uppercase tracking-widest text-sm">Estimate</a>
         </div>
         <div class="hidden md:block text-slate-800 font-bold border-l-2 border-orange-700 pl-4 text-lg">
             (223) 246-4781
@@ -75,7 +81,7 @@
     <section id="about" class="py-24 about-gradient text-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl mb-4">Our Legacy & Mission</h2>
+                <h2 class="text-4xl md:text-5xl mb-4 uppercase tracking-tight">Our Legacy & Mission</h2>
                 <div class="h-1 w-20 bg-orange-700 mx-auto"></div>
             </div>
             
@@ -83,7 +89,6 @@
                 <p class="text-xl md:text-2xl italic text-white font-medium">
                     At Titan Legacy Builders LLC, we believe a company’s true value isn't measured by its profit margins, but by the lives it touches and the communities it restores.
                 </p>
-                
                 <p>The world can often feel like a heavy place. Between systemic neglect and the "ugly head" of greed, far too many people are left in the dark. We see the neighborhoods that have been shunned. We see the families that state and local officials have overlooked. We see the "forgotten" communities where problems persist simply because fixing them doesn't offer a high enough "price point" for others to care.</p>
                 
                 <div class="border-l-4 border-orange-700 pl-8 my-12">
@@ -91,7 +96,7 @@
                     <p>Where others see a lack of ROI, we see a legacy worth building. Where incompetence and greed have stalled progress, Titan Legacy Builders shows up to provide:</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="grid md:grid-cols-3 gap-8 mt-12 mb-12">
                     <div class="bg-white/5 p-6 border border-white/10 rounded-sm">
                         <h4 class="text-orange-700 font-bold mb-2 uppercase tracking-tighter">A Light in the Darkness</h4>
                         <p class="text-sm">We go where others won't, focusing on the people and places the world has turned its back on.</p>
@@ -108,7 +113,7 @@
 
                 <p class="pt-8 italic border-t border-white/10">There is a unique beauty in those who have "nothing" but possess the richest spirits. You are the heart of our mission. We aren’t just here to fix structures; we’re here to restore the dignity and safety that every human being deserves.</p>
                 
-                <p class="text-2xl text-center text-white font-bold tracking-widest uppercase py-4 mt-8">
+                <p class="text-2xl text-center text-white font-bold tracking-widest uppercase py-4 mt-8 leading-relaxed">
                     If the world has forgotten you, know that Titan Legacy Builders is looking for you. <br>
                     <span class="text-orange-700">We are ready to be the light.</span>
                 </p>
@@ -116,7 +121,16 @@
         </div>
     </section>
 
-    <section class="py-8 bg-slate-100 border-y border-gray-200 shadow-inner">
+    <section class="blueprint-bg py-20 border-y border-gray-300 shadow-inner">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-4xl text-slate-800 font-serif italic mb-3 leading-relaxed">
+                "By wisdom a house is built, and through understanding it is established."
+            </h2>
+            <p class="text-orange-800 font-bold uppercase tracking-[0.3em] text-sm">— Proverbs 24:3</p>
+        </div>
+    </section>
+
+    <section class="py-8 bg-slate-100 border-b border-gray-200 shadow-inner">
         <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-20 items-center">
             <div class="flex items-center space-x-2">
                 <span class="text-orange-700 text-2xl">✓</span>
@@ -133,15 +147,15 @@
         </div>
     </section>
 
-    <section id="compliance" class="py-20 bg-white">
+    <section id="compliance" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
                     <h2 class="text-3xl md:text-4xl mb-6 text-slate-900 uppercase tracking-tight font-bold">Built to Code, <br><span class="text-orange-700">Built to Last</span></h2>
-                    <p class="text-gray-600 leading-relaxed mb-6 font-light">
-                        Every project we undertake is executed with strict adherence to the **National Electrical Code (NEC)** and the **International Building Code (IBC)**. We don't just build for aesthetics; we build for safety, longevity, and structural integrity.
+                    <p class="text-gray-600 leading-relaxed mb-6 font-light italic">
+                        Every project we undertake is executed with strict adherence to the National Electrical Code (NEC) and the International Building Code (IBC).
                     </p>
-                    <ul class="space-y-3 text-slate-700 font-semibold uppercase text-sm tracking-wider">
+                    <ul class="space-y-3 text-slate-700 font-semibold uppercase text-xs tracking-[0.2em]">
                         <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Verified Safe Electrical Systems</li>
                         <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Structural Integrity Standards</li>
                         <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Pennsylvania Regulation Compliant</li>
@@ -149,11 +163,11 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center gap-12 items-center">
                     <div class="text-center">
-           
+                       
                         <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">NEC Compliant</p>
                     </div>
                     <div class="text-center">
-         
+                     
                         <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">IBC Standards</p>
                     </div>
                 </div>
@@ -161,7 +175,7 @@
         </div>
     </section>
 
-    <section id="partners" class="py-16 bg-white overflow-hidden">
+    <section id="partners" class="py-16 bg-white overflow-hidden border-t border-gray-100">
         <div class="text-center mb-8">
             <h2 class="text-sm md:text-lg uppercase tracking-[0.6em] text-slate-500 font-extrabold">Strategic Industry Partners</h2>
         </div>
@@ -181,35 +195,35 @@
 
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl mb-4 text-slate-900 uppercase font-bold">Our Specialties</h2>
+            <h2 class="text-4xl md:text-5xl mb-4 text-slate-900 uppercase font-bold tracking-tighter">Our Specialties</h2>
             <div class="h-1 w-20 bg-orange-700 mx-auto"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-12">
-            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700">
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700 transition hover:-translate-y-2">
                 <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Home Renovations</h3>
                 <p class="text-gray-600 leading-relaxed font-light text-sm">Complete interior and exterior transformations. We breathe new life into Pennsylvania homes with modern design and expert finishes.</p>
             </div>
-            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-slate-800">
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-slate-800 transition hover:-translate-y-2">
                 <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Electrical & HVAC</h3>
-                <p class="text-gray-600 leading-relaxed font-light text-sm">From panel upgrades and lighting to high-efficiency climate control systems, we ensure your home's vital systems are safe and modern.</p>
+                <p class="text-gray-600 leading-relaxed font-light text-sm">From panel upgrades and lighting to high-efficiency climate control systems, we ensure vital systems are safe and modern.</p>
             </div>
-            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700">
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700 transition hover:-translate-y-2">
                 <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Plumbing Solutions</h3>
-                <p class="text-gray-600 leading-relaxed font-light text-sm">Professional plumbing services for kitchen and bath remodels, new additions, and full system reruns with "Titan" durability.</p>
+                <p class="text-gray-600 leading-relaxed font-light text-sm">Professional plumbing for kitchen/bath remodels and new additions with Titan-level durability.</p>
             </div>
         </div>
     </section>
 
     <section id="testimonials" class="py-24 bg-slate-800 text-white border-y border-slate-700">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl mb-6 font-bold uppercase italic">Customer Experience</h2>
+            <h2 class="text-4xl md:text-5xl mb-6 font-bold uppercase italic tracking-tight">Customer Experience</h2>
             <div class="bg-slate-900/50 p-12 rounded-lg border border-slate-700 inline-block w-full max-w-2xl">
                 <div class="flex justify-center text-5xl star-color mb-4 drop-shadow-md">★★★★★</div>
                 <div class="text-3xl font-bold mb-2 uppercase italic">5.0 Rating</div>
                 <p class="uppercase tracking-[0.3em] text-sm font-bold text-orange-700 mb-10">Verified Reviews</p>
 
                 <a href="https://www.google.com/search?q=Titan+Legacy+Builders+LLC+Waynesboro+PA" target="_blank" class="google-btn inline-flex items-center justify-center gap-4 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-lg">
-                 
+                  
                     <span>See the legacy for yourself</span>
                 </a>
             </div>
@@ -224,15 +238,15 @@
             <form id="estimate-form" action="https://formspree.io/f/mreaajwp" method="POST" class="grid md:grid-cols-2 gap-6 text-left">
                 <div class="flex flex-col">
                     <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Full Name</label>
-                    <input type="text" name="name" required placeholder="Your Name" class="p-4 rounded-sm bg-slate-800 border border-slate-700 focus:outline-none focus:border-orange-700 text-white">
+                    <input type="text" name="name" required placeholder="Your Name" class="p-4 rounded-sm bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-orange-700">
                 </div>
                 <div class="flex flex-col">
                     <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Email Address</label>
-                    <input type="email" name="email" required placeholder="email@address.com" class="p-4 rounded-sm bg-slate-800 border border-slate-700 focus:outline-none focus:border-orange-700 text-white">
+                    <input type="email" name="email" required placeholder="email@address.com" class="p-4 rounded-sm bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-orange-700">
                 </div>
                 <div class="flex flex-col md:col-span-2">
                     <label class="text-xs uppercase tracking-widest text-orange-700 mb-2 font-bold">Project Details</label>
-                    <textarea name="message" required placeholder="Tell us how we can help..." class="p-4 rounded-sm bg-slate-800 border border-slate-700 h-40 focus:outline-none focus:border-orange-700 text-white"></textarea>
+                    <textarea name="message" required placeholder="Tell us how we can help..." class="p-4 rounded-sm bg-slate-800 border border-slate-700 h-40 text-white focus:outline-none focus:border-orange-700"></textarea>
                 </div>
                 <button type="submit" id="submit-btn" class="md:col-span-2 bg-orange-700 py-5 rounded-sm font-bold hover:bg-orange-800 transition uppercase tracking-[0.2em] text-lg">Request Free Estimate</button>
             </form>
@@ -243,14 +257,14 @@
                 <p class="text-gray-300 text-lg font-light">Thank you for reaching out. We will contact you shortly.</p>
             </div>
         </div>
-    </nav>
+    </section>
 
     <footer class="py-12 bg-white border-t border-gray-200 text-center">
         <div class="text-lg font-bold text-slate-800 mb-2 uppercase">
             TITAN <span class="text-orange-700">Legacy</span> Builders LLC
         </div>
-        <p class="text-slate-500 text-[10px] mb-4 uppercase tracking-widest italic tracking-[0.4em]">Renovations • Electrical • HVAC • Plumbing</p>
-        <div class="text-gray-500 text-xs tracking-widest uppercase">
+        <p class="text-slate-500 text-[10px] mb-4 uppercase tracking-[0.4em] italic">Renovations • Electrical • HVAC • Plumbing</p>
+        <div class="text-gray-400 text-xs tracking-widest uppercase">
             &copy; 2026 | WAYNESBORO, PENNSYLVANIA | PH: (223) 246-4781
         </div>
     </footer>
