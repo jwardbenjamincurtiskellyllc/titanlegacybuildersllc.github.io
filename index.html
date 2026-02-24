@@ -43,6 +43,8 @@
         .slide { height: 140px; width: 400px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .partner-name { font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 4px; font-size: 1rem; transition: all 0.4s ease; }
         .slide:hover .partner-name { color: #c2410c; transform: scale(1.05); }
+        
+        .specialty-icon { width: 48px; height: 48px; margin-bottom: 1.5rem; color: #c2410c; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -78,6 +80,23 @@
         </div>
     </header>
 
+    <section class="bg-slate-900 py-12 border-b border-orange-700/30">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="border-b md:border-b-0 md:border-r border-slate-700 pb-8 md:pb-0">
+                <div class="text-5xl font-bold text-orange-700 mb-2 uppercase tracking-tighter">2024</div>
+                <div class="text-white uppercase tracking-[0.3em] text-xs font-bold">Established</div>
+            </div>
+            <div class="border-b md:border-b-0 md:border-r border-slate-700 pb-8 md:pb-0">
+                <div class="text-5xl font-bold text-white mb-2 uppercase">50+</div>
+                <div class="text-orange-700 uppercase tracking-[0.3em] text-xs font-bold">Satisfied Clients</div>
+            </div>
+            <div>
+                <div class="text-5xl font-bold text-white mb-2 uppercase">PA</div>
+                <div class="text-orange-700 uppercase tracking-[0.3em] text-xs font-bold">Serving Multiple Counties</div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="py-24 about-gradient text-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -106,7 +125,7 @@
                         <p class="text-sm">We don’t walk away because a project isn’t "lucrative" enough. We show up because it’s the right thing to do.</p>
                     </div>
                     <div class="bg-white/5 p-6 border border-white/10 rounded-sm">
-                        <h4 class="text-orange-700 font-bold mb-2 uppercase tracking-tighter">Service for the "Forgotten"</h4>
+                        <h4 class="text-orange-700 font-bold mb-2 uppercase tracking-tighter">Service for the "Worthless"</h4>
                         <p class="text-sm">No human being is a statistic. We are ready to give everything we have to support you.</p>
                     </div>
                 </div>
@@ -172,34 +191,25 @@
             </div>
         </div>
     </section>
-
-    <section id="compliance" class="py-24 bg-white">
+    
+<section id="compliance" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
+            <div class="flex flex-col items-center text-center">
+                <div class="max-w-2xl">
                     <h2 class="text-3xl md:text-4xl mb-6 text-slate-900 uppercase tracking-tight font-bold">Built to Code, <br><span class="text-orange-700">Built to Last</span></h2>
-                    <p class="text-gray-600 leading-relaxed mb-6 font-light italic">
+                    <p class="text-gray-600 leading-relaxed mb-10 font-light italic">
                         Every project we undertake is executed with strict adherence to the National Electrical Code (NEC) and the International Building Code (IBC).
                     </p>
-                    <ul class="space-y-3 text-slate-700 font-semibold uppercase text-xs tracking-[0.2em]">
+                    <ul class="flex flex-wrap justify-center gap-6 text-slate-700 font-semibold uppercase text-xs tracking-[0.2em]">
                         <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Verified Safe Electrical Systems</li>
                         <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Structural Integrity Standards</li>
                         <li class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-700"></span> Pennsylvania Regulation Compliant</li>
                     </ul>
                 </div>
-                <div class="md:w-1/2 flex justify-center gap-12 items-center">
-                    <div class="text-center">
-     
-                        <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">NEC Compliant</p>
-                    </div>
-                    <div class="text-center">
-
-                        <p class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">IBC Standards</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+    
 
     <section id="partners" class="py-16 bg-white overflow-hidden border-t border-gray-100">
         <div class="text-center mb-8">
@@ -224,18 +234,29 @@
             <h2 class="text-4xl md:text-5xl mb-4 text-slate-900 uppercase font-bold tracking-tighter">Our Specialties</h2>
             <div class="h-1 w-20 bg-orange-700 mx-auto"></div>
         </div>
-        <div class="grid md:grid-cols-3 gap-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700 transition hover:-translate-y-2">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Home Renovations</h3>
+                <svg class="specialty-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <h3 class="text-xl font-bold mb-4 text-slate-800 uppercase italic">Home Renovations</h3>
                 <p class="text-gray-600 leading-relaxed font-light text-sm">Complete interior and exterior transformations. We breathe new life into Pennsylvania homes with modern design and expert finishes.</p>
             </div>
+            
             <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-slate-800 transition hover:-translate-y-2">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Electrical & HVAC</h3>
+                <svg class="specialty-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#1e293b"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <h3 class="text-xl font-bold mb-4 text-slate-800 uppercase italic">Electrical & HVAC</h3>
                 <p class="text-gray-600 leading-relaxed font-light text-sm">From panel upgrades and lighting to high-efficiency climate control systems, we ensure vital systems are safe and modern.</p>
             </div>
+
             <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-orange-700 transition hover:-translate-y-2">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800 uppercase italic">Plumbing Solutions</h3>
+                <svg class="specialty-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                <h3 class="text-xl font-bold mb-4 text-slate-800 uppercase italic">Plumbing Solutions</h3>
                 <p class="text-gray-600 leading-relaxed font-light text-sm">Professional plumbing for kitchen/bath remodels and new additions with Titan-level durability.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-sm shadow-xl border-b-8 border-slate-800 transition hover:-translate-y-2">
+                <svg class="specialty-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#1e293b"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                <h3 class="text-xl font-bold mb-4 text-slate-800 uppercase italic">Haul Away & Clean Out</h3>
+                <p class="text-gray-600 leading-relaxed font-light text-sm">Efficient site clearing, debris removal, and full property clean-outs to prepare your space for its next legacy.</p>
             </div>
         </div>
     </section>
@@ -249,7 +270,7 @@
                 <p class="uppercase tracking-[0.3em] text-sm font-bold text-orange-700 mb-10">Verified Reviews</p>
 
                 <a href="https://www.google.com/search?q=Titan+Legacy+Builders+LLC+Waynesboro+PA" target="_blank" class="google-btn inline-flex items-center justify-center gap-4 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-lg">
-               
+                
                     <span>See the legacy for yourself</span>
                 </a>
             </div>
@@ -297,6 +318,10 @@
         <div class="flex flex-col items-center justify-center gap-2 pt-4 border-t border-gray-100 max-w-xs mx-auto">
             <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" class="w-8 h-auto shadow-sm" alt="USA Flag">
             <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600">Proudly Based in the USA</span>
+        </div>
+
+        <div class="pt-8 text-[9px] font-bold uppercase tracking-[0.5em] text-slate-300">
+            Site Built By Catalyst Core Software 2026 ®️
         </div>
     </footer>
 
