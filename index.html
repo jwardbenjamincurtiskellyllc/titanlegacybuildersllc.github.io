@@ -67,7 +67,7 @@
 
     <nav class="flex justify-between items-center px-6 py-4 bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div class="flex items-center gap-5">
-            <img src="Images/logo.png" alt="Titan Legacy Builders Logo" class="h-14 md:h-20 w-auto">
+            <img src="Images/header.png" alt="Titan Legacy Builders Logo" class="h-14 md:h-20 w-auto">
             <div class="hidden sm:flex flex-col border-l border-gray-200 pl-5 text-left">
                 <span class="text-[9px] uppercase tracking-[0.3em] font-black text-slate-400">Waynesboro, PA</span>
                 <span class="text-[9px] uppercase tracking-[0.3em] font-black text-titan-orange">Licensed & Insured</span>
@@ -107,7 +107,12 @@
             </div>
         </div>
     </header>
-
+  <section class="bg-black pt-12 pb-10">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-6">
+            <span class="text-[11px] uppercase tracking-[0.5em] font-black text-titan-orange border-b border-zinc-800 pb-3 block max-w-xs mx-auto">
+                Serving All of Pennsylvania
+            </span>
+        </div>
     <section class="bg-black py-12">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div class="md:border-r border-slate-800">
@@ -157,20 +162,64 @@
         </div>
     </section>
 
-    <section class="gallery-container">
+       <section class="gallery-container">
         <div class="gallery-track">
-            <div class="gallery-item"><img src="Images/door.jpg" alt="Portfolio 1"></div>
+            <div class="gallery-item"><img src="Images/Door.jpg" alt="Portfolio 1"></div>
             <div class="gallery-item"><img src="Images/electric.jpg" alt="Portfolio 2"></div>
             <div class="gallery-item"><img src="Images/fence.jpg" alt="Portfolio 3"></div>
             <div class="gallery-item"><img src="Images/flooring.jpg" alt="Portfolio 4"></div>
-            <div class="gallery-item"><img src="Images/porch.jpg" alt="Portfolio 5"></div>
-            <div class="gallery-item"><img src="Images/playset.jpg" alt="Portfolio 1"></div>
-            <div class="gallery-item"><img src="Images/main.jpg" alt="Portfolio 2"></div>
-            <div class="gallery-item"><img src="Images/porch2.jpg" alt="Portfolio 3"></div>
-            <div class="gallery-item"><img src="Images/greenhouse.jpg" alt="Portfolio 4"></div>
-            <div class="gallery-item"><img src="Images/snow.jpg" alt="Portfolio 5"></div>
+            <div class="gallery-item"><img src="Images/greenhouse.jpg" alt="Portfolio 5"></div>
+            <div class="gallery-item"><img src="Images/main.jpg" alt="Portfolio 6"></div>
+            <div class="gallery-item"><img src="Images/playset.jpg" alt="Portfolio 7"></div>
+            <div class="gallery-item"><img src="Images/porch.jpg" alt="Portfolio 8"></div>
+            <div class="gallery-item"><img src="Images/porch2.jpg" alt="Portfolio 9"></div>
+            <div class="gallery-item"><img src="Images/shed.jpg" alt="Portfolio 10"></div>
+            <div class="gallery-item"><img src="Images/snow.jpg" alt="Portfolio 1"></div>
+            <div class="gallery-item"><img src="Images/Door.jpg" alt="Portfolio 2"></div>
+            <div class="gallery-item"><img src="Images/electric.jpg" alt="Portfolio 3"></div>
+            <div class="gallery-item"><img src="Images/fence.jpg" alt="Portfolio 4"></div>
+            <div class="gallery-item"><img src="Images/flooring.jpg" alt="Portfolio 5"></div>
+            <div class="gallery-item"><img src="Images/greenhouse.jpg" alt="Portfolio 6"></div>
+            <div class="gallery-item"><img src="Images/main.jpg" alt="Portfolio 7"></div>
+            <div class="gallery-item"><img src="Images/playset.jpg" alt="Portfolio 8"></div>
+            <div class="gallery-item"><img src="Images/porch.jpg" alt="Portfolio 9"></div>
+            <div class="gallery-item"><img src="Images/porch2.jpg" alt="Portfolio 10"></div>
         </div>
     </section>
+<section id="calculator" class="py-20 bg-black border-y border-zinc-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-zinc-900 p-10 shadow-2xl border border-zinc-800 rounded-sm">
+                <h3 class="text-3xl font-bold uppercase tracking-tighter mb-8 text-center text-white">Flooring <span class="text-titan-orange">Estimator</span></h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-[10px] font-black uppercase tracking-widest text-titan-orange block mb-2">Total Room Sq. Ft</label>
+                            <input type="number" id="calc-sqft-input" class="w-full p-4 bg-black border border-zinc-800 text-white focus:border-titan-orange outline-none font-bold" placeholder="0">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-black uppercase tracking-widest text-titan-orange block mb-2">Price Per Sq. Ft ($)</label>
+                            <input type="number" id="calc-price" class="w-full p-4 bg-black border border-zinc-800 text-white focus:border-titan-orange outline-none font-bold" placeholder="0.00">
+                        </div>
+                        <button onclick="calculateFlooring()" class="w-full bg-titan-orange text-white py-4 font-black uppercase tracking-widest hover:bg-orange-600 transition shadow-[0_4px_0_0_#c2410c] active:translate-y-[2px] active:shadow-none">Calculate Estimate</button>
+                    </div>
+                    <div class="bg-black text-white p-8 flex flex-col justify-center items-center text-center border border-zinc-800">
+                        <div class="mb-6">
+                            <div class="text-[10px] uppercase tracking-[0.3em] mb-1 text-titan-orange font-bold">Total Sq. Ft (+10%)</div>
+                            <div id="calc-result-sqft" class="text-4xl font-bold tracking-tighter text-white">0</div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase tracking-[0.3em] mb-1 text-titan-orange font-bold">Est. Material Cost</div>
+                            <div id="calc-result-cost" class="text-5xl font-bold tracking-tighter text-white">$0.00</div>
+                        </div>
+                        <p class="text-[9px] mt-6 text-zinc-500 uppercase tracking-widest">Pricing is for material estimation only.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
 
     <section id="services" class="py-28 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
@@ -230,21 +279,6 @@
         </div>
     </section>
 
-    <section class="py-12 bg-white">
-        <div class="slider">
-            <div class="slide-track">
-                <div class="slide"><span class="partner-label">Varner Roofing</span></div>
-                <div class="slide"><span class="partner-label">Lowe's Home Imp.</span></div>
-                <div class="slide"><span class="partner-label">Shady Grove Cabinets</span></div>
-                <div class="slide"><span class="partner-label">Burkholder Flooring</span></div>
-                <div class="slide"><span class="partner-label">Varner Roofing</span></div>
-                <div class="slide"><span class="partner-label">Lowe's Home Imp.</span></div>
-                <div class="slide"><span class="partner-label">Shady Grove Cabinets</span></div>
-                <div class="slide"><span class="partner-label">Burkholder Flooring</span></div>
-            </div>
-        </div>
-    </section>
-
     <section id="contact" class="bg-black text-white py-28 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
@@ -294,6 +328,22 @@
     </footer>
 
     <script>
+
+          // Flooring Calculator Logic - Square Footage Mode
+        function calculateFlooring() {
+            const inputSqFt = document.getElementById('calc-sqft-input').value;
+            const price = document.getElementById('calc-price').value || 0;
+
+            if(inputSqFt > 0) {
+                const totalSqFt = Math.ceil(inputSqFt * 1.10); // Adding 10% waste
+                const totalCost = (totalSqFt * price).toFixed(2);
+                
+                document.getElementById('calc-result-sqft').innerText = totalSqFt;
+                document.getElementById('calc-result-cost').innerText = '$' + totalCost;
+            }
+        }
+    
+    
         const searchInput = document.getElementById('site-search');
         const resultsDiv = document.getElementById('search-results');
         const searchIndex = [
